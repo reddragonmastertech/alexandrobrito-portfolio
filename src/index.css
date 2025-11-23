@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 221.2 83.2% 53.3%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 221.2 83.2% 53.3%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 180 3% 8%;
+  --foreground: 180 5% 96%;
+  --card: 180 4% 10%;
+  --card-foreground: 180 5% 96%;
+  --popover: 180 4% 10%;
+  --popover-foreground: 180 5% 96%;
+  --primary: 175 70% 45%;
+  --primary-foreground: 180 10% 5%;
+  --secondary: 175 15% 18%;
+  --secondary-foreground: 180 5% 96%;
+  --muted: 175 12% 15%;
+  --muted-foreground: 175 8% 65%;
+  --accent: 165 85% 35%;
+  --accent-foreground: 180 5% 96%;
+  --destructive: 5 75% 50%;
+  --destructive-foreground: 180 5% 96%;
+  --border: 175 12% 20%;
+  --input: 175 12% 15%;
+  --ring: 175 70% 45%;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+}
+
+/* Beautiful Custom Scrollbar Styles */
+/* Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted) / 0.2);
+  border-radius: 100px;
+  margin: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    hsl(var(--primary) / 0.6),
+    hsl(var(--primary) / 0.8)
+  );
+  border-radius: 100px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    hsl(var(--primary) / 0.8),
+    hsl(var(--primary))
+  );
+  border-width: 1px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(
+    180deg,
+    hsl(var(--primary)),
+    hsl(var(--accent))
+  );
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--primary) / 0.6) hsl(var(--muted) / 0.2);
+}
+
+/* Enhanced scrollbar for modal content */
+.modal-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-scrollbar::-webkit-scrollbar-track {
+  background: hsl(var(--muted) / 0.15);
+  border-radius: 100px;
+  margin: 8px 0;
+}
+
+.modal-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    hsl(var(--primary) / 0.5),
+    hsl(280 80% 60% / 0.6)
+  );
+  border-radius: 100px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 0 0 6px hsl(var(--primary) / 0.3);
+}
+
+.modal-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    hsl(var(--primary) / 0.8),
+    hsl(280 80% 60% / 0.9)
+  );
+  box-shadow: 0 0 10px hsl(var(--primary) / 0.5);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar animation */
+@keyframes scrollbar-pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  animation: scrollbar-pulse 3s ease-in-out infinite;
+}

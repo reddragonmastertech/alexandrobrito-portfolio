@@ -451,36 +451,19 @@ const Projects = () => {
                   </motion.div>
                   
                   {/* Project Description Section */}
-                  <motion.div 
-                    className="p-6 sm:p-8 lg:p-10"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ 
-                      delay: 0.3,
-                      duration: 0.5,
-                      ease: [0.22, 1, 0.36, 1]
-                    }}
-                    style={{ height: 'calc(106vh - 26rem)' }}
-                  >
-                    {(selectedProject.story || selectedProject.challenge || selectedProject.solution) && (
-                      <h4 className="font-bold text-foreground text-xl lg:text-2xl mb-6 flex items-center gap-2">
-                        <motion.span 
-                          className="w-2 h-2 bg-gradient-to-r from-primary to-purple-500 rounded-full"
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          transition={{ 
-                            delay: 0.4,
-                            duration: 0.4,
-                            ease: [0.22, 1, 0.36, 1]
-                          }}
-                        />
-                        Project Description
-                      </h4>
-                    )}
-                    
-                    <div className="space-y-6 overflow-y-auto pr-2 h-full colorful-scrollbar">
-                      {/* The Story */}
-                      {selectedProject.story && selectedProject.story.trim() !== '' && (
+                  <div className="flex flex-col flex-1 min-h-0">
+                    {/* Description - Fixed */}
+                    {selectedProject.description && selectedProject.description.trim() !== '' && (
+                      <motion.div 
+                        className="p-6 sm:p-8 lg:p-10 flex-shrink-0 border-b border-border/20"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ 
+                          delay: 0.3,
+                          duration: 0.5,
+                          ease: [0.22, 1, 0.36, 1]
+                        }}
+                      >
                         <motion.div
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
@@ -492,16 +475,27 @@ const Projects = () => {
                         >
                           <h5 className="font-medium text-foreground text-sm lg:text-base mb-3 flex items-center gap-2">
                             <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                            The Story
+                            Description
                           </h5>
                           <p className="text-muted-foreground leading-relaxed text-sm lg:text-base pl-4 border-l-2 border-blue-500/20">
-                            {selectedProject.story}
+                            {selectedProject.description}
                           </p>
                         </motion.div>
-                      )}
+                      </motion.div>
+                    )}
 
-                      {/* The Challenge */}
-                      {selectedProject.challenge && selectedProject.challenge.trim() !== '' && (
+                    {/* Solution - Scrollable */}
+                    {selectedProject.solution && selectedProject.solution.trim() !== '' && (
+                      <motion.div 
+                        className="p-6 sm:p-8 lg:p-10 flex-1 min-h-0 overflow-y-auto pr-2 colorful-scrollbar"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ 
+                          delay: 0.4,
+                          duration: 0.5,
+                          ease: [0.22, 1, 0.36, 1]
+                        }}
+                      >
                         <motion.div
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
@@ -512,89 +506,112 @@ const Projects = () => {
                           }}
                         >
                           <h5 className="font-medium text-foreground text-sm lg:text-base mb-3 flex items-center gap-2">
-                            <div className="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
-                            The Challenge
+                            <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                            Solution
                           </h5>
-                          <p className="text-muted-foreground leading-relaxed text-sm lg:text-base pl-4 border-l-2 border-orange-500/20">
-                            {selectedProject.challenge}
-                          </p>
+                          <div className="space-y-3">
+                            {selectedProject.solution.split('\n').filter(line => line.trim() !== '').map((line, index) => {
+                              const borderColors = [
+                                'border-purple-500',
+                                'border-blue-500',
+                                'border-green-500',
+                                'border-orange-500',
+                                'border-pink-500',
+                                'border-cyan-500'
+                              ];
+                              const bgColors = [
+                                'bg-purple-500/10',
+                                'bg-blue-500/10',
+                                'bg-green-500/10',
+                                'bg-orange-500/10',
+                                'bg-pink-500/10',
+                                'bg-cyan-500/10'
+                              ];
+                              const borderColor = borderColors[index % borderColors.length];
+                              const bgColor = bgColors[index % bgColors.length];
+                              return (
+                                <motion.div
+                                  key={index}
+                                  className={`pl-4 border-l-4 ${borderColor} ${bgColor} py-2 rounded-r`}
+                                  initial={{ opacity: 0, x: -10 }}
+                                  animate={{ opacity: 1, x: 0 }}
+                                  transition={{ 
+                                    delay: 0.7 + index * 0.1,
+                                    duration: 0.4,
+                                    ease: [0.22, 1, 0.36, 1]
+                                  }}
+                                >
+                                  <p className="text-muted-foreground leading-relaxed text-sm lg:text-base">
+                                    {line.trim()}
+                                  </p>
+                                </motion.div>
+                              );
+                            })}
+                          </div>
                         </motion.div>
-                      )}
+                      </motion.div>
+                    )}
 
-                      {/* The Solution */}
-                      {selectedProject.solution && selectedProject.solution.trim() !== '' && (
+                    {/* Skills - Fixed */}
+                    {selectedProject.skills && selectedProject.skills.length > 0 && (
+                      <motion.div 
+                        className="p-6 sm:p-8 lg:p-10 flex-shrink-0 border-t border-border/20"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ 
+                          delay: 0.5,
+                          duration: 0.5,
+                          ease: [0.22, 1, 0.36, 1]
+                        }}
+                      >
                         <motion.div
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ 
-                            delay: 0.7,
+                            delay: 0.8,
                             duration: 0.5,
                             ease: [0.22, 1, 0.36, 1]
                           }}
                         >
-                          <h5 className="font-medium text-foreground text-sm lg:text-base mb-3 flex items-center gap-2">
-                            <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                            The Solution
-                          </h5>
-                          <p className="text-muted-foreground leading-relaxed text-sm lg:text-base pl-4 border-l-2 border-green-500/20">
-                            {selectedProject.solution}
-                          </p>
+                          <h4 className="font-semibold text-foreground text-base lg:text-lg mb-4 flex items-center gap-2">
+                            <motion.span 
+                              className="w-2 h-2 bg-gradient-to-r from-primary to-purple-500 rounded-full"
+                              initial={{ scale: 0 }}
+                              animate={{ scale: 1 }}
+                              transition={{ 
+                                delay: 0.9,
+                                duration: 0.4,
+                                ease: [0.22, 1, 0.36, 1]
+                              }}
+                            />
+                            Skills
+                          </h4>
+                          <div className="flex flex-wrap gap-2">
+                            {selectedProject.skills.map((t, i) => (
+                              <motion.span 
+                                key={i} 
+                                className="inline-flex items-center rounded-full border border-border/50 px-3 py-1.5 text-xs lg:text-sm font-medium text-muted-foreground bg-gradient-to-r from-muted/30 to-muted/50 hover:from-primary/10 hover:to-purple-500/10 transition-all duration-400"
+                                initial={{ opacity: 0, scale: 0.7, y: 10 }}
+                                animate={{ opacity: 1, scale: 1, y: 0 }}
+                                transition={{ 
+                                  delay: 1.0 + i * 0.04,
+                                  duration: 0.4,
+                                  ease: [0.22, 1, 0.36, 1]
+                                }}
+                                whileHover={{ 
+                                  scale: 1.08,
+                                  y: -2,
+                                  transition: { duration: 0.2 }
+                                }}
+                              >
+                                {t}
+                              </motion.span>
+                            ))}
+                          </div>
                         </motion.div>
-                      )}
-                    </div>
-                  </motion.div>
-
-
-                  {/* Technologies - Fixed at Bottom (Right side only) */}
-                  {selectedProject.tags && selectedProject.tags.length > 0 && (
-                    <motion.div 
-                      className="px-6 sm:px-8 lg:px-10 pt-4 sm:pt-6 lg:pt-8 pb-8 sm:pb-10 lg:pb-12 bg-card/50 flex-shrink-0 absolute bottom-0 right-0"
-                      style={{ height: '20vh', width: '40%' }}
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ 
-                        delay: 0.4,
-                        duration: 0.6,
-                        ease: [0.22, 1, 0.36, 1]
-                      }}
-                    >
-                      <h4 className="font-semibold text-foreground text-base lg:text-lg mb-4 flex items-center gap-2">
-                        <motion.span 
-                          className="w-2 h-2 bg-gradient-to-r from-primary to-purple-500 rounded-full"
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          transition={{ 
-                            delay: 0.5,
-                            duration: 0.4,
-                            ease: [0.22, 1, 0.36, 1]
-                          }}
-                        />
-                        Technologies Used
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {selectedProject.tags.map((t, i) => (
-                          <motion.span 
-                            key={i} 
-                            className="inline-flex items-center rounded-full border border-border/50 px-3 py-1.5 text-xs lg:text-sm font-medium text-muted-foreground bg-gradient-to-r from-muted/30 to-muted/50 hover:from-primary/10 hover:to-purple-500/10 transition-all duration-400"
-                            initial={{ opacity: 0, scale: 0.7, y: 10 }}
-                            animate={{ opacity: 1, scale: 1, y: 0 }}
-                            transition={{ 
-                              delay: 0.5 + i * 0.04,
-                              duration: 0.4,
-                              ease: [0.22, 1, 0.36, 1]
-                            }}
-                            whileHover={{ 
-                              scale: 1.08,
-                              y: -2,
-                              transition: { duration: 0.2 }
-                            }}
-                          >
-                            {t}
-                          </motion.span>
-                        ))}
-                      </div>
-                    </motion.div>
-                  )}
+                      </motion.div>
+                    )}
+                  </div>
                 </div>
               </div>
             </motion.div>

@@ -1,19 +1,21 @@
-  import vasylPic from "../Assets/Vasyl Kravtsiv.png";
+  import alexBritoPic from "../Assets/Alexandro_Brito.png";
 
   export const profile = {
-    name: "Vasyl Kravtsiv",
+    name: "Alexandro Brito",
     titles: ["Full Stack Developer", "AI Integration Expert", "AI Automation Expert"],
     bio: [
-      "Innovative and highly skilled Full Stack Developer with 8+ years of experience in building scalable web applications, AI integrations, and cutting-edge solutions.",
-      "Proficient in MERN, MEAN, MEVN and various Python and PHP frameworks",
-      "Adept at developing responsive websites, chatbots, and AI-powered applications for sectors such as Fintech,Healthcare, EdTech and more",
-      "Experienced in integrating complex systems, building RESTful APIs, and delivering seamless user experiences across multiple platforms.",
+      "Full stack developer skilled in building scalable Web and Mobile applications using React/Next.js, Node.js, Django, Flutter, and modern cloud technologies.",
+      "Experienced in delivering SaaS platforms, AI-powered solutions, and event-driven microservices across Fintech, Healthcare, and EdTech.",
+      "Capable of creating clean, responsive interfaces and robust backend systems for seamless cross-platform user experiences.",
+      "Proficient in TypeScript, PostgreSQL, AWS, Docker, and CI/CD pipelines to ensure reliable, maintainable engineering outcomes.",
+      "Passionate about transforming complex requirements into efficient, high-impact digital products that deliver meaningful business value.",
     ],
-    image: vasylPic,
+    summary:`Full stack developer experienced in building scalable Web and Mobile applications using React/Next.js, Node.js, Django, Flutter, and modern cloud technologies. I specialize in SaaS platforms, AI-powered solutions, and event-driven microservices across Fintech, Healthcare, and EdTech, delivering clean UI, reliable backend systems, and cross-platform products. With strong skills in TypeScript, PostgreSQL, AWS, Docker, and CI/CD workflows, I focus on creating scalable, maintainable solutions that transform complex requirements into impactful digital applications.`,
+    image: alexBritoPic,
   social: {
-    email: "vasylkravtsiv140@gmail.com",
-    phone: "+380 66 430 5576",
-    linkedin: "linkedin.com/in/vasyl-kravtsiv-8087b0382",
-    github: "https://github.com/vasylkravtsiv-seniorgit",
+    email: "alexbritodevtech@gmail.com",
+    phone: "+55 619 8164 5440",
+    linkedin: "www.linkedin.com/in/alexandro-brito-0792a239a",
+    github: "",
   },
   };

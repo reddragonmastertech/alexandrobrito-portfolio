@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row gap-8 md:gap-4 justify-between">
           <div className="space-y-2">
             <h3 className="text-lg font-semibold">{profile.name}</h3>
-            <p className="max-w-md text-sm text-muted-foreground">{profile.bio[0]}</p>
+            <p className="max-w-md text-sm text-muted-foreground">{profile.summary}</p>
           </div>
 
           <div>

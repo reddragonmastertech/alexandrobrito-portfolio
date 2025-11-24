@@ -17,11 +17,11 @@ function App() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>Vasyl Kravtsiv | Full-stack Developer</title>
-        <meta name="description" content="Welcome to Vasyl Kravtsiv's portfolio website. I'm Vasyl Kravtsiv, a passionate full-stack developer showcasing my projects, skills, and experience." />
-        <meta name="keywords" content="Jasonanakrolls, Jasonrolls, jasonanakrolls.in, Vasyl Kravtsiv,jasonrolls portfolio, Full stack Developer" />
-        <meta name="author" content="Vasyl Kravtsiv" />
-        <meta property="og:title" content="Vasyl Kravtsiv - Portfolio" />
+        <title>Alexandro Brito | Full-stack Developer</title>
+        <meta name="description" content="Welcome to Alexandro Brito's portfolio website. I'm Alexandro Brito, a passionate full-stack developer showcasing my projects, skills, and experience." />
+        <meta name="keywords" content="alexandrobrito, alexbrito, alexandrobrito.in, Alexandro Brito,alexandro brito portfolio, Full stack Developer" />
+        <meta name="author" content="Alexandro Brito" />
+        <meta property="og:title" content="Alexandro Brito - Portfolio" />
         <meta property="og:description" content="Welcome to my portfolio website. Explore my projects, skills, and professional experience." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://adityasri.in" />
@@ -31,7 +31,7 @@ function App() {
           {
             "@context": "https://schema.org",
             "@type": "Person",
-            "name": "Vasyl Kravtsiv",
+            "name": "Alexandro Brito",
             "url": "https://adityasri.in",
             "sameAs": [
               "https://github.com/adityasrivastava29",
@@ -39,7 +39,7 @@ function App() {
               "https://x.com/adityasri_in"
             ],
             "jobTitle": "Software Engineer",
-            "description": "Portfolio website of Vasyl Kravtsiv, Full-stack developer. Projects, skills, experience, and contact information."
+            "description": "Portfolio website of Alexandro Brito, Full-stack developer. Projects, skills, experience, and contact information."
           }
         `}</script>
         {/* SEO: Robots meta tag */}

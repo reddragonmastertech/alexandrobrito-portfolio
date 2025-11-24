@@ -1,12 +1,12 @@
-import kpiImage from '../Assets/KPI.jpg';
+import unifespImage from '../Assets/unifesp.png';
 
 export const education = [
   {
     degree: 'Bachelor of Computer Science',
-    institution: 'Kyiv Polytechnic Institute',
-    location: 'Kyiv, Ukraine',
-    period: 'September 2014 - June 2018',
-    image: kpiImage,
+    institution: 'Universidade Federal de São Paulo',
+    location: 'São Paulo, Brazil',
+    period: '2019 - 2023',
+    image: unifespImage,
   },  
   
 ];

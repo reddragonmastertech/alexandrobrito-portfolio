@@ -3,7 +3,6 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import { ModeToggle } from './theme/mode-toggle';
 import { cn } from '../lib/utils';
 import { profile } from '../data/profile';
-import faviconImg from '../assets/favicon.jpg';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -35,7 +34,7 @@ const Header = () => {
             onClick={() => scrollToSection('about')}
           >
             <img
-              src={faviconImg}
+              src={`${process.env.PUBLIC_URL || ''}/favicon.jpg`}
               alt="Site logo"
               className="h-9 w-9 rounded-full shadow-sm border border-border/50"
               loading="lazy"

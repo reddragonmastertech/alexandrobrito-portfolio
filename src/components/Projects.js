@@ -148,7 +148,7 @@ const Projects = () => {
                 <motion.img
                   src={proj.images && proj.images[0]}
                   alt={proj.title}
-                  className="w-full h-full object-cover object-center transition-transform duration-[800ms] ease-out group-hover:scale-110"
+                  className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-110"
                   style={{
                     objectFit: 'cover',
                     objectPosition: 'center'

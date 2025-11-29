@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 import { ReactTyped } from 'react-typed';
-// import alexBritoPic from "../assets/Alexandro_Brito.png";
 import { profile } from '../data/profile';
 import { motion } from 'framer-motion';
 

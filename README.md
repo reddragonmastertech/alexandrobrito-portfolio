@@ -1,6 +1,6 @@
-# Vasyl Kravtsiv - Portfolio Website
+# Alexandro Brito - Portfolio Website
 
-This is a personal portfolio website of Vasyl Kravtsiv built with React to showcase my experience, projects, skills, and certifications.
+This is a personal portfolio website of Alexandro Brito built with React to showcase my experience, projects, skills.
 
 ## Features
 
@@ -23,8 +23,8 @@ This is a personal portfolio website of Vasyl Kravtsiv built with React to showc
 
 1. Clone the repository
    ```
-   git clone https://github.com/jasonlignestech-sudo/jasonrolls_portfolio.git
-   cd first_portfolio
+   git clone https://github.com/reddragonmastertech/alexandrobrito-portfolio.git
+   cd alexbritoportfolio
    ```
 
 2. Install dependencies

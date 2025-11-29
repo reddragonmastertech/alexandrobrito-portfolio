@@ -1,8 +1,8 @@
 {
-  "name": "vasyl_k-portfolio",
+  "name": "alexandro-brito-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jasonrolls_portfolio",
+  "homepage": "https://alexbritodev.netlify.app",
   "main": "index.js",
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.11",

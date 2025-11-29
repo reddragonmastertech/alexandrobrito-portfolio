@@ -552,8 +552,8 @@ const Projects = () => {
                       </motion.div>
                     )}
 
-                    {/* Skills - Fixed */}
-                    {selectedProject.skills && selectedProject.skills.length > 0 && (
+                    {/* Technologies - Fixed */}
+                    {selectedProject.technologies && selectedProject.technologies.length > 0 && (
                       <motion.div 
                         className="p-6 sm:p-8 lg:p-10 flex-shrink-0 border-t border-border/20"
                         initial={{ opacity: 0, y: 20 }}
@@ -584,10 +584,10 @@ const Projects = () => {
                                 ease: [0.22, 1, 0.36, 1]
                               }}
                             />
-                            Skills
+                            Technologies
                           </h4>
                           <div className="flex flex-wrap gap-2">
-                            {selectedProject.skills.map((t, i) => (
+                            {selectedProject.technologies.map((t, i) => (
                               <motion.span 
                                 key={i} 
                                 className="inline-flex items-center rounded-full border border-border/50 px-3 py-1.5 text-xs lg:text-sm font-medium text-muted-foreground bg-gradient-to-r from-muted/30 to-muted/50 hover:from-primary/10 hover:to-purple-500/10 transition-all duration-400"

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 import { ReactTyped } from 'react-typed';
-import alexBritoPic from "../assets/Alexandro_Brito.png";
+// import alexBritoPic from "../assets/Alexandro_Brito.png";
 import { profile } from '../data/profile';
 import { motion } from 'framer-motion';
 
@@ -93,7 +93,7 @@ const About = () => {
               <div className="relative w-full flex justify-center items-center">
                 <div className="relative w-full max-w-sm aspect-[4/5] overflow-hidden rounded-3xl border border-white/10 shadow-[0_20px_60px_rgba(15,23,42,0.35)]">
               <motion.img
-                src={profile.image || alexBritoPic}
+                src={profile.image}
                 alt={profile.name}
                     className="w-full h-full object-cover"
                     initial={{ scale: 1.05 }}

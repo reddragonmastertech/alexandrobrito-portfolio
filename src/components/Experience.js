@@ -116,12 +116,12 @@ const Experience = () => {
                         
                         {/* Company under title with logo */}
                         <div className="flex items-center gap-3">
-                          <motion.span 
-                            className="text-lg sm:text-xl font-semibold bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent"
-                            whileHover={{ scale: 1.01 }}
-                          >
-                            {exp.company}
-                          </motion.span>
+                        <motion.span 
+                          className="text-lg sm:text-xl font-semibold bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent"
+                          whileHover={{ scale: 1.01 }}
+                        >
+                          {exp.company}
+                        </motion.span>
                           {exp.logo && exp.url && (
                             <motion.a
                               href={exp.url}
@@ -143,18 +143,18 @@ const Experience = () => {
                         </div>
                       </div>
                       
-                      <ul className="space-y-2 mb-6 flex-1 flex flex-col justify-end">
+                      <ul className="space-y-3 mb-6 flex-1 flex flex-col justify-end">
                         {exp.bullets.map((bullet, bulletIndex) => (
                           <motion.li 
                             key={bulletIndex}
-                            className="text-sm text-muted-foreground leading-relaxed flex items-start gap-2"
+                            className="text-base sm:text-lg text-muted-foreground leading-relaxed flex items-start gap-3"
                             initial={{ opacity: 0, x: -10 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: (index * 0.1) + (bulletIndex * 0.05) }}
                           >
                             <motion.div 
-                              className="w-1.5 h-1.5 bg-gradient-to-r from-primary to-purple-500 rounded-full mt-2 flex-shrink-0"
+                              className="w-2 h-2 bg-gradient-to-r from-primary to-purple-500 rounded-full mt-2 flex-shrink-0"
                               whileHover={{ scale: 1.5 }}
                             />
                             <span>{bullet}</span>
@@ -174,13 +174,13 @@ const Experience = () => {
                       {/* Location and Period above image */}
                       <div className="flex flex-col gap-2 mb-4 w-full">
                         <motion.div 
-                          className="text-base sm:text-lg font-semibold bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent text-right"
+                          className="text-lg sm:text-xl font-semibold bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent text-right"
                           whileHover={{ scale: 1.02 }}
                         >
                           📍 {exp.location}
                         </motion.div>
                         <motion.div 
-                          className="text-base sm:text-lg font-semibold bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent text-right"
+                          className="text-lg sm:text-xl font-semibold bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent text-right"
                           whileHover={{ scale: 1.05 }}
                         >
                           ⏰ {exp.period}
@@ -194,21 +194,21 @@ const Experience = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="relative w-full aspect-video rounded-lg border border-border/30 shadow-md overflow-hidden block"
-                          whileHover={{ 
-                            scale: 1.02,
-                            boxShadow: "0 10px 25px rgba(0,0,0,0.15)"
-                          }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          <motion.img
+                        whileHover={{ 
+                          scale: 1.02,
+                          boxShadow: "0 10px 25px rgba(0,0,0,0.15)"
+                        }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <motion.img
                             src={exp.company_image}
                             alt={`${exp.company} team`}
-                            className="w-full h-full object-cover"
-                            whileHover={{ 
-                              scale: 1.05,
-                            }}
-                            transition={{ duration: 0.3 }}
-                          />
+                          className="w-full h-full object-cover"
+                          whileHover={{ 
+                            scale: 1.05,
+                          }}
+                          transition={{ duration: 0.3 }}
+                        />
                         </motion.a>
                       )}
                     </motion.div>

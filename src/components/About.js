@@ -1,14 +1,14 @@
 import React from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 import { ReactTyped } from 'react-typed';
-import alexBritoPic from "../Assets/Alexandro_Brito.png";
+import alexBritoPic from "../assets/Alexandro_Brito.png";
 import { profile } from '../data/profile';
 import { motion } from 'framer-motion';
 
 const About = () => {
   const socialLinks = [
     { icon: <FaEnvelope />, label: 'Email', href: `mailto:${profile.social.email}` },
-    { icon: <FaPhone />, label: 'Phone', href: `tel:${profile.social.phone}` },
+    { icon: <FaWhatsapp />, label: 'WhatsApp', href: `https://wa.me/${profile.social.whatsapp.replace(/[^0-9]/g, '')}` },
     { icon: <FaLinkedin />, label: 'LinkedIn', href: profile.social.linkedin },
     { icon: <FaGithub />, label: 'GitHub', href: profile.social.github },
   ].filter((link) => link.href);
@@ -32,7 +32,7 @@ const About = () => {
       <div className="container relative">
         <div className="grid gap-12 lg:grid-cols-[3fr_2fr]">
           {/* Left - narrative */}
-          <motion.div
+        <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -44,12 +44,12 @@ const About = () => {
                 Alexandro Brito
               </h1>
               <div className="text-2xl sm:text-3xl font-bold text-transparent bg-gradient-to-r from-primary via-purple-500 to-indigo-500 bg-clip-text">
-                <ReactTyped
-                  strings={profile.titles}
+            <ReactTyped
+              strings={profile.titles}
                   typeSpeed={55}
                   backSpeed={35}
-                  backDelay={2000}
-                  loop
+              backDelay={2000}
+              loop
                 />
               </div>
             </div>
@@ -60,8 +60,8 @@ const About = () => {
                   key={paragraph}
                   className="flex items-start gap-4 rounded-2xl border border-white/10 bg-gradient-to-br from-background/40 via-background/70 to-background/40 p-4 shadow-[0_10px_30px_rgba(15,23,42,0.2)]"
                   initial={{ opacity: 0, y: 12 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
                   transition={{ delay: 0.2 + idx * 0.1 }}
                 >
                   <motion.div 
@@ -71,20 +71,20 @@ const About = () => {
                   >
                     <span className="text-lg font-bold">●</span>
                   </motion.div>
-                  <p className="text-base text-muted-foreground leading-relaxed">
+                  <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
                     {paragraph}
                   </p>
                 </motion.div>
-              ))}
+          ))}
             </div>
 
-          </motion.div>
+        </motion.div>
 
           {/* Right - portrait & badges */}
-          <motion.div
+        <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          viewport={{ once: true }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
             className="relative"
           >
@@ -92,38 +92,38 @@ const About = () => {
             <div className="relative rounded-[28px] border border-white/10 bg-card/70 backdrop-blur-2xl p-6 shadow-2xl h-full flex flex-col gap-8 items-center justify-center">
               <div className="relative w-full flex justify-center items-center">
                 <div className="relative w-full max-w-sm aspect-[4/5] overflow-hidden rounded-3xl border border-white/10 shadow-[0_20px_60px_rgba(15,23,42,0.35)]">
-                  <motion.img
-                    src={profile.image || alexBritoPic}
-                    alt={profile.name}
+              <motion.img
+                src={profile.image || alexBritoPic}
+                alt={profile.name}
                     className="w-full h-full object-cover"
                     initial={{ scale: 1.05 }}
                     whileHover={{ scale: 1.08 }}
                     transition={{ duration: 0.6 }}
-                  />
-                </div>
-              </div>
+              />
+            </div>
+          </div>
 
               {/* Contact icons under photo */}
-              <motion.div
+          <motion.div
                 className="flex flex-wrap justify-center gap-4 text-xl"
                 initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
               >
                 {socialLinks.map((link, idx) => (
-                  <motion.a
+            <motion.a
                     key={link.label}
                     href={link.href}
                     target={link.href?.startsWith('http') ? '_blank' : undefined}
-                    rel="noopener noreferrer"
+              rel="noopener noreferrer"
                     aria-label={link.label}
                     className="p-3 rounded-2xl border border-white/10 bg-white/5 text-foreground hover:border-white/40 hover:bg-white/15 transition-all duration-300"
                     whileHover={{ scale: 1.1, rotate: idx % 2 === 0 ? 4 : -4 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     {link.icon}
-                  </motion.a>
+            </motion.a>
                 ))}
               </motion.div>
             </div>

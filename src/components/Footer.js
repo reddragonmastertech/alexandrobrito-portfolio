@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope , FaWhatsapp} from 'react-icons/fa';
 import { profile } from '../data/profile';
 // Tailwind migration: inline classes
 
@@ -27,6 +27,16 @@ const Footer = () => {
             <h3 className="text-lg font-semibold">Connect</h3>
             <ul className="mt-3 flex items-center gap-4">
               <li>
+                <a className="hover:text-primary transition-colors" href={`mailto:${profile.social.email}`} aria-label="Email">
+                  <FaEnvelope size={20} />
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-primary transition-colors" href={`https://wa.me/${profile.social.whatsapp.replace(/[^0-9]/g, '')}`} aria-label="WhatsApp">
+                  <FaWhatsapp size={20} />
+                </a>
+              </li>
+              <li>
                 <a className="hover:text-primary transition-colors" href={profile.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <FaLinkedin size={20} />
                 </a>
@@ -34,11 +44,6 @@ const Footer = () => {
               <li>
                 <a className="hover:text-primary transition-colors" href={profile.social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <FaGithub size={20} />
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-primary transition-colors" href={`mailto:${profile.social.email}`} aria-label="Email">
-                  <FaEnvelope size={20} />
                 </a>
               </li>
             </ul>

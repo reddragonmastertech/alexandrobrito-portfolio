@@ -3,6 +3,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import { ModeToggle } from './theme/mode-toggle';
 import { cn } from '../lib/utils';
 import { profile } from '../data/profile';
+import faviconImg from '../assets/favicon.jpg';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,10 +31,16 @@ const Header = () => {
       <div className="container">
         <nav className="flex items-center justify-between py-4">
           <button
-            className="text-lg font-semibold text-foreground hover:text-primary transition-colors"
+            className="flex items-center gap-3 text-lg font-semibold text-foreground hover:text-primary transition-colors"
             onClick={() => scrollToSection('about')}
           >
-            {profile.name}
+            <img
+              src={faviconImg}
+              alt="Site logo"
+              className="h-9 w-9 rounded-full shadow-sm border border-border/50"
+              loading="lazy"
+            />
+            <span>{profile.name}</span>
           </button>
           <ul className="hidden md:flex items-center gap-6 text-sm relative">
             
@@ -172,7 +179,7 @@ const Header = () => {
             </li>
             <li>
               <a 
-                href="/Vasyl-Kravtsiv.pdf" 
+                href="/Alexandro-Brito-Resume.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex h-9 items-center rounded-md border border-border px-3 text-sm hover:bg-accent hover:text-accent-foreground transition-colors"
@@ -259,7 +266,7 @@ const Header = () => {
               </li>
               <li>
                 <a 
-                  href="/Vasyl-Kravtsiv.pdf" 
+                  href="/Alexandro-Brito-Resume.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex h-9 items-center rounded-md border border-border px-3 text-sm hover:bg-accent hover:text-accent-foreground transition-colors"

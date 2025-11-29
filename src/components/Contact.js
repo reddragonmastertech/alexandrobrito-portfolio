@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaEnvelope, FaLinkedin, FaGithub, FaPhone } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, FaGithub, FaWhatsapp } from 'react-icons/fa';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { profile } from '../data/profile';
@@ -87,9 +87,9 @@ const Contact = () => {
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <FaPhone className="text-primary" />
-                <a href={`tel:${profile.social.phone}`} className="hover:text-primary transition-colors">
-                  {profile.social.phone}
+                <FaWhatsapp className="text-primary" />
+                <a href={`https://wa.me/${profile.social.whatsapp.replace(/[^0-9]/g, '')}`} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  {profile.social.whatsapp}
                 </a>
               </div>
               <div className="flex items-center gap-3">

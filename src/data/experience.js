@@ -4,8 +4,8 @@ export const experience = [
     company: "Nearsure",
     location: "California, USA",
     period: "February 2024 – Present",
-    company_image: require('../assets/nearsure_group.jpg'),
-    logo: require('../assets/nearsure_logo.jpeg'),
+    company_image: require('../Assets/nearsure_group.jpg'),
+    logo: require('../Assets/nearsure_logo.jpeg'),
     url: 'https://nearsure.com/',
     bullets: [
       "Built Fintech SaaS applications with cloud-native architecture leveraging AWS, Docker, Kubernetes, and CI/CD pipelines—reducing deployment time by 60%.",
@@ -22,8 +22,8 @@ export const experience = [
     company: "Vinta Software",
     location: "Recife, Brazil",
     period: "August 2022 - January 2024",
-    company_image: require('../assets/vinta_group.jpeg'),
-    logo: require('../assets/vinta_logo.jpeg'),
+    company_image: require('../Assets/vinta_group.jpeg'),
+    logo: require('../Assets/vinta_logo.jpeg'),
     url: 'https://vintasoftware.com/',
     bullets: [
       "Built healthcare-focused web and mobile apps using React Native and Flutter, increasing user engagement by 28%.",
@@ -40,8 +40,8 @@ export const experience = [
     company: "Luby Software",
     location: "São Paulo, Brazil",
     period: "May 2020 – July 2022",
-    company_image: require('../assets/luby_group.png'),
-    logo: require('../assets/luby_logo.jpeg'),
+    company_image: require('../Assets/luby_group.png'),
+    logo: require('../Assets/luby_logo.jpeg'),
     url: 'https://luby.co/',
     bullets: [
       "Developed responsive, mobile-first SaaS platforms using React, Next.js, JavaScript/TypeScript, and Tailwind CSS, improving page load speed by 35%.",

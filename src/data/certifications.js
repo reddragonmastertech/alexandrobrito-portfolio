@@ -1,6 +1,6 @@
-import awsCCP from '../assets/aws-ccp.png';
-import awsCDP from '../assets/aws-cda.png';
-import githubFoundations from '../assets/github-foundations.png';
+import awsCCP from '../Assets/aws-ccp.png';
+import awsCDP from '../Assets/aws-cda.png';
+import githubFoundations from '../Assets/github-foundations.png';
 
 export const certifications = [
   {

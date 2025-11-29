@@ -1,4 +1,4 @@
-  import alexBritoPic from "../assets/Alexandro_Brito.jpg";
+  import alexBritoPic from "../Assets/Alexandro_Brito.jpg";
 
   export const profile = {
     name: "Alexandro Brito",

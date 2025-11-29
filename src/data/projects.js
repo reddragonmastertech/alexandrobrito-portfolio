@@ -3,7 +3,7 @@ export const projects = [
     {
       title: 'Moolax',
       images: [
-        require('../assets/project_image/moolax.jpg'),
+        require('../Assets/project_image/moolax.jpg'),
       ],
       description: `MoolaX is a stylish, easy-to-use and adaptive financial tool that is designed specifically for the dynamic lifestyles of modern professionals and entrepreneurs. MoolaX is here to track various income sources, pending payments, and real-time cash flow insights for a new generation of freelancers, part-time workers and service providers.`,
       solution: `Developed a scalable Fintech SaaS dashboard enabling users to track income, expenses, cash flow trends, and client transactions across multiple business types.
@@ -17,7 +17,7 @@ export const projects = [
   {
     title: 'LinkByCar',
     images: [
-      require('../assets/project_image/linkbycar_dashboard.jpg'),
+      require('../Assets/project_image/linkbycar_dashboard.jpg'),
     ],
     description: 'LinkByCar is a SaaS startup that created a tool to collect, process, and aggregate data from vehicles. With the use of AI technology, it can predict the behavior of any vehicle — all to ensure you safely get to your destination.',
     solution: `Implemented the platform using Next.js, leveraging its server-side rendering capabilities to deliver fast, dynamic, and highly responsive interfaces aligned with client requirements.
@@ -32,7 +32,7 @@ export const projects = [
   {
     title: 'TutorChase',
     images: [
-      require('../assets/project_image/tutorchase.jpg'),
+      require('../Assets/project_image/tutorchase.jpg'),
     ],
     description: `TutorChase is a UK-based premium online tutoring platform that connects students with world-class teachers to provide top-tier academic support, particularly for those aiming to apply to elite universities such as Oxford and Harvard.`,
     solution: `Built a high-performance platform using Next.js with server-side rendering and static generation to deliver fast load times, improved SEO, and an enhanced user experience.
@@ -46,7 +46,7 @@ export const projects = [
   {
     title: 'Symbolik Social',
     images: [
-      require('../assets/project_image/symbolik-dashboard.jpg'),
+      require('../Assets/project_image/symbolik-dashboard.jpg'),
     ],
     description: `Symbolik Social is an online community platform integrated within the Symbolik financial analytics application, designed to facilitate communication, education, and collaboration among market professionals and enthusiasts.`,
     solution: `Built a modular social platform using Next.js, React, and TypeScript with Tailwind/Radix UI for a modern UX, and developed high-performance C# ASP.NET Core APIs with Entity Framework Core and MySQL to deliver scalable, efficient data-driven functionality.
@@ -60,7 +60,7 @@ export const projects = [
   {
     title: 'LYS Academy',
     images: [
-      require('../assets/project_image/LYS academy_dashboard.jpg'),
+      require('../Assets/project_image/LYS academy_dashboard.jpg'),
     ],
     description: `LYS Academy is an EdTech startup that implements educational courses through WhatsApp for enterprises' workforce.`,
     solution: `Designed a flexible user flow for creating, managing, and delivering course content across multiple message types.
@@ -77,7 +77,7 @@ export const projects = [
   {
     title: 'Optix Volt',
     images: [
-      require('../assets/project_image/optixvolt_dashboard.png'),
+      require('../Assets/project_image/optixvolt_dashboard.png'),
     ],
     description: 'A scalable investment platform built with modern backend architecture, automated trading logic, and real-time portfolio analytics.',
     solution: `Architected backend systems using Python, Node.js, and Django/FastAPI to power advanced technical analysis pipelines, automated trading workflows, and high-interest investment strategies.

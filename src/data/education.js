@@ -1,4 +1,4 @@
-import unifespImage from '../Assets/unifesp.png';
+import unifespImage from '../assets/unifesp.png';
 
 export const education = [
   {

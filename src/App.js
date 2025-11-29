@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Header from './components/Header';
 import About from './components/About';
 import Footer from './components/Footer';
+import SocialSidebar from './components/SocialSidebar';
 import { SkeletonGrid } from './components/ui/skeleton';
 import './index.css';
 const Experience = React.lazy(() => import('./components/Experience'));
@@ -45,6 +46,7 @@ function App() {
         {/* SEO: Robots meta tag */}
         <meta name="robots" content="index, follow" />
       </Helmet>
+      <SocialSidebar />
       <Header />
       <div className="main-content">
         <About />
